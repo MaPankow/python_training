@@ -38,22 +38,29 @@ iteriert und die Produkte mit einem Preis über 50 in ein neues Dictionary speic
 
 products = {"Laptop": 999, "Mouse": 25, "Keyboard": 45, "Monitor": 150}
 
-print(products)
-print(products['Laptop'])
+# print(products)
+# print(products['Laptop'])
 
-for product in products:
+# for product in products:
     
-    if products[product] > 50:
-        print(products[product])
-#         pricey_hardware.append(product, price)
-#         return pricey_hardware
+#     if products[product] > 50:
+#         print(products[product])
 
-# print(pricey_hardware(products, price))
+
+products_over_50 = {product: products[product] for product in products if products[product] > 50}
+print(products_over_50)
+
 
 '''
 Kombination von Iteration und Comprehension
 Aufgabe: Schreibe ein Programm, das eine Liste von Zahlen filtert und die Quadrate der geraden
 Zahlen berechnet, wobei du sowohl eine for-Schleife als auch eine List Comprehension
 verwendest.
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 '''
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numbers_square_even = [num ** 2 for num in numbers if num%2 == 0]
+print(numbers_square_even)
+
+even_odd = [num for num in numbers if num%2 == 0]
+print(even_odd)

@@ -25,4 +25,7 @@ student1.display_id()
 student1.greet()
 
 
-
+class Person2:
+   def __init__(self) -> None: #wenn der Pfeil angezeigt wird, ist das eine 
+      #atomatische Vervollständigung, die den Datentyp anzeigt, kann weg
+      pass
